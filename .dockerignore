@@ -1,0 +1,11 @@
+# Carpeta de control de versiones: no debe ir dentro de la imagen.
+.git
+
+# Dependencias instaladas: se regeneran, no se copian a la imagen.
+node_modules
+
+# Archivos de log: basura que no aporta nada al contenedor.
+*.log
+
+# Metadatos de macOS que se cuelan en las carpetas.
+.DS_Store

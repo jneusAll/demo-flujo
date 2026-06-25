@@ -1,0 +1,12 @@
+# Define los servicios (contenedores) que forman la aplicación.
+services:
+  # Nombre lógico del servicio dentro de Compose.
+  web:
+    # Construye la imagen usando el Dockerfile de esta misma carpeta (".").
+    build: .
+    # Nombre fijo y legible para el contenedor en "docker ps".
+    container_name: demo-flujo
+    # Mapea el puerto del host al del contenedor -> "HOST:CONTENEDOR".
+    # Abre localhost:8080 y nginx responde en su puerto 80 interno.
+    ports:
+      - "8080:80"
